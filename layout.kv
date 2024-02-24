@@ -1,0 +1,120 @@
+<LayoutRoot>:
+    orientation: "vertical"
+    padding: 10
+    Label:
+        text: "Exp_No:"
+    TextInput:
+        id: no_input
+        multiline: False
+        size_hint_y: None
+        height: "30dp"
+
+    Label:
+        text: "Exp Name:"
+    TextInput:
+        id: expname_input
+        multiline: False
+        size_hint_y: None
+        height: "30dp"
+
+    Label:
+        text: "Course Code:"
+    Spinner:
+        id: ccode_spinner
+        text: "Select Course Code"
+        size_hint_y: None
+        height: "30dp"
+        on_text: app.on_ccode_select(self, self.text)  
+
+    Label:
+        text: "Course Title:"
+    TextInput:
+        id: ctitle_input
+        multiline: False
+        size_hint_y: None
+        height: "30dp"
+        text: root.ctitle_text 
+
+    Label:
+        text: "Teacher's Name:"
+    Spinner:
+        id: tname_spinner
+        text: "Select Teacher's Name"
+        size_hint_y: None
+        height: "30dp"
+        on_text: app.on_tname_select(self, self.text)  
+    Label:
+        text: "Teacher's Designation:"
+    TextInput:
+        id: desg_input
+        multiline: False
+        size_hint_y: None
+        height: "30dp"
+        text: root.desg_text  
+
+    Label:
+        text: "Name:"
+    TextInput:
+        id: name_input
+        multiline: False
+        size_hint_y: None
+        height: "30dp"
+        text: "Md. Tanvir Hassan"  
+
+    Label:
+        text: "ID:"
+    TextInput:
+        id: sid_input
+        multiline: False
+        size_hint_y: None
+        height: "30dp"
+        text: "221-33-1548" 
+
+    Label:
+        text: "Batch:"
+    TextInput:
+        id: batch_input
+        multiline: False
+        size_hint_y: None
+        height: "30dp"
+        text: "37"  
+    
+    Label:
+        text: "L-T:"
+    TextInput:
+        id: lt_input
+        multiline: False
+        size_hint_y: None
+        height: "30dp"
+        text: "3-1"  
+
+    Label:
+        text: "Section:"
+    TextInput:
+        id: section_input
+        multiline: False
+        size_hint_y: None
+        height: "30dp"
+        text: "B"  
+
+    Label:
+        text: "Experiment Date:"
+    TextInput:
+        id: expd_input
+        multiline: False
+        size_hint_y: None
+        height: "30dp"
+    
+    Label:
+        text: "Submission Date:"
+    TextInput:
+        id: subd_input
+        multiline: False
+        size_hint_y: None
+        height: "30dp"
+
+    Button:
+        text: "Generate Document"
+        size_hint_y: None
+        height: "40dp"
+        on_release: app.generate_document()
